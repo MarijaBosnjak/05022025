@@ -25,7 +25,7 @@ public class Zadatak1 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Upišite ime i prezime:");
-        String ImeiPrezime = sc.nextLine();//varijabla za imeIprezime
+        String ImeiPrezime = sc.nextLine().trim();//varijabla za imeIprezime
         String[] imepezime = ImeiPrezime.split(" ");
         if (imepezime[0].length() > 7) {
             System.out.println("Unesite ime ponovo.Ime sadrzi vise od 7 znakova");
@@ -37,11 +37,11 @@ public class Zadatak1 {
         System.out.println("Upisali ste prezime: " + imepezime[1]);
         GradRođenja = GradRođenja.toLowerCase();
         System.out.println("Grad rođenja je = " + GradRođenja);
-        String[] gradrodenja = GradRođenja.split("");
+
 
 
         for (int i = 0; i < GradRođenja.length(); i++) {
-            char s = GradRođenja.charAt(i);
+            char s = GradRođenja.charAt(i);//Pristupa pojedinacno svakom znaku unutar nekog stringa
 
 
             if (s == 'a') {
@@ -57,6 +57,7 @@ public class Zadatak1 {
                 System.out.println("Grad ima samoglasnik u");
             }
         }
+        //Dodajs još za prebroji broj samoglasnika
     }
 
 
